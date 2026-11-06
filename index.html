@@ -12,17 +12,17 @@ h1{font-size:30px;line-height:1.1;margin:8px 0;color:var(--navy)}.intro{color:va
 .section{border-top:1px solid var(--line);padding-top:20px;margin-top:20px}.section h2{font-size:15px;margin:0 0 13px;color:var(--navy)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:14px}label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}
 input,select{width:100%;padding:12px 13px;border:1px solid #cbd9e1;border-radius:11px;background:#fff;color:var(--ink);font-size:15px}input:focus,select:focus{outline:2px solid #9bcce4;border-color:#6ba9ca}
-.hint{font-size:11px;color:var(--muted);line-height:1.45;margin-top:6px}.kit-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.kit{border:1px solid var(--line);border-radius:13px;padding:12px;display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}.kit > input[type="checkbox"]{width:17px;height:17px;margin:2px 0;flex:none}.qty input{width:100%;height:auto;min-height:38px;display:block}.kit label{margin:0;cursor:pointer}.kit-name{font-size:13px;font-weight:700}.kit-price{font-size:12px;color:var(--muted);font-weight:400;margin-top:3px}.qty{margin-top:10px;grid-column:2 / -1;width:100%;min-width:0}.kit .qty input[type="number"]{display:block!important;width:100%!important;min-width:100%!important;max-width:none!important;height:42px!important;min-height:42px!important;box-sizing:border-box!important;padding:9px 12px!important;border:1px solid #cbd9e1!important;border-radius:9px!important;background:#fff!important;font-size:14px!important;line-height:normal!important;appearance:auto!important;-webkit-appearance:auto!important}.result{background:var(--blue);border-radius:16px;padding:18px;margin-top:20px}.result .eyebrow{font-size:11px;letter-spacing:.1em;font-weight:800;color:var(--navy)}.total{font-size:34px;font-weight:800;color:var(--navy);margin:5px 0}.per{font-size:13px;color:#456477}
+.hint{font-size:11px;color:var(--muted);line-height:1.45;margin-top:6px}.kit-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.kit{border:1px solid var(--line);border-radius:13px;padding:12px;display:grid;grid-template-columns:18px 76px minmax(0,1fr);gap:9px;align-items:start;min-width:0}.kit-list.no-images .kit{grid-template-columns:18px minmax(0,1fr)}.kit-list.no-images .kit-photo{display:none}.kit-list.no-images .qty{grid-column:2 / -1}.view-toggle{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}.view-toggle button{width:auto;margin:0;padding:9px 13px;border:1px solid #cbd9e1;background:#fff;color:var(--navy);border-radius:999px;font-size:12px}.view-toggle button.active{background:var(--navy);color:#fff;border-color:var(--navy)}.kit > input[type="checkbox"]{width:17px;height:17px;margin:3px 0;flex:none}.kit-photo{width:76px;height:76px;object-fit:cover;border-radius:10px;background:var(--blue);display:block}.kit-photo.placeholder{display:grid;place-items:center;font-size:30px}.kit label{margin:0;cursor:pointer;min-width:0}.kit-name{font-size:13px;font-weight:700}.kit-price{font-size:12px;color:var(--muted);font-weight:400;margin-top:3px}.qty{margin-top:10px;grid-column:3 / -1;width:100%;min-width:0}.qty input{width:100%;height:auto;min-height:38px;display:block}.kit .qty input[type="number"]{display:block!important;width:100%!important;min-width:100%!important;max-width:none!important;height:42px!important;min-height:42px!important;box-sizing:border-box!important;padding:9px 12px!important;border:1px solid #cbd9e1!important;border-radius:9px!important;background:#fff!important;font-size:14px!important;line-height:normal!important;appearance:auto!important;-webkit-appearance:auto!important}.result{background:var(--blue);border-radius:16px;padding:18px;margin-top:20px}.result .eyebrow{font-size:11px;letter-spacing:.1em;font-weight:800;color:var(--navy)}.total{font-size:34px;font-weight:800;color:var(--navy);margin:5px 0}.per{font-size:13px;color:#456477}
 table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}td{padding:10px 0;border-bottom:1px solid #d5e4eb}td:last-child{text-align:right;font-weight:700;white-space:nowrap}
 .note{background:#fff8e6;border:1px solid #f1dfad;border-radius:12px;padding:13px;font-size:12px;line-height:1.5;margin-top:15px}.ok{background:var(--mint);border:1px solid #cce6d8;border-radius:12px;padding:13px;font-size:12px;line-height:1.5;margin-top:14px}
 button{border:0;background:var(--navy);color:#fff;border-radius:12px;padding:13px 16px;font-size:14px;font-weight:700;cursor:pointer;width:100%;margin-top:14px}button:hover{opacity:.92}.small{font-size:11px;color:var(--muted);line-height:1.5;margin-top:18px}.hidden{display:none!important}
-@media(max-width:560px){.wrap{margin:8px auto;padding:10px}.card{padding:19px}.grid,.kit-list{grid-template-columns:1fr}h1{font-size:26px}.total{font-size:29px}}
+@media(max-width:560px){.wrap{margin:8px auto;padding:10px}.card{padding:19px}.grid,.kit-list{grid-template-columns:1fr}.kit{grid-template-columns:18px 68px minmax(0,1fr)}.kit-photo{width:68px;height:68px}h1{font-size:26px}.total{font-size:29px}}
 </style></head><body><div class="wrap"><main class="card">
 <div class="brand"><div class="mark">🌿</div><div><strong>TERRARIUM PALACE</strong><span>Creative Nature Experience · Since 2018</span></div></div>
 <h1>Workshop Price Calculator</h1><p class="intro">Rencanakan pengalaman kreatif bersama Terrarium Palace. Pilih workshop dan kit, masukkan kebutuhan acara, lalu lihat estimasi investasinya.</p>
 <div class="section" style="border:0;padding-top:0;margin-top:0"><h2>01 · Detail workshop</h2>
 <div class="grid"><div class="field"><label for="participants">Jumlah peserta</label><input id="participants" type="number" min="1" value="20"></div><div class="field"><label for="format">Format workshop</label><select id="format"><option>Individual kits</option><option>Shared / group kits</option></select><div class="hint">Jumlah kit dapat lebih sedikit dari jumlah peserta untuk aktivitas berkelompok.</div></div></div>
-<div class="field"><label>Pilih produk workshop / kit (bisa lebih dari satu)</label><div class="kit-list" id="kitList"></div><div class="hint">Centang produk yang dibutuhkan, lalu isi jumlah kit masing-masing.</div></div>
+<div class="field"><label>Pilih produk workshop / kit (bisa lebih dari satu)</label><div class="view-toggle" role="group" aria-label="Tampilan produk"><button type="button" id="withImages" class="active" aria-pressed="true">Dengan gambar</button><button type="button" id="withoutImages" aria-pressed="false">Tampilan polos</button></div><div class="kit-list" id="kitList"></div><div class="hint">Centang produk yang dibutuhkan, lalu isi jumlah kit masing-masing.</div></div>
 </div>
 <div class="section"><h2>02 · Lokasi acara & logistik</h2>
 <div class="field"><label for="location">Lokasi acara</label><select id="location"><option value="Bogor City">Kota Bogor</option><option value="Jadetabek">Kabupaten Bogor / Jadetabek (di luar Kota Bogor)</option><option value="Outside Jabodetabek">Luar Jabodetabek</option></select></div>
@@ -35,20 +35,20 @@ button{border:0;background:var(--navy);color:#fff;border-radius:12px;padding:13p
 </main></div>
 <script>
 const products=[
-{id:'tuscany',name:'Tuscany Kit',group:'Open Terrarium',price:65000},
-{id:'barley',name:'Barley Kit',group:'Open Terrarium',price:65000},
-{id:'medium',name:'Medium Bowl Kit',group:'Open Terrarium',price:145000},
-{id:'big',name:'Big Bowl Kit',group:'Open Terrarium',price:185000},
-{id:'xtrabig',name:'Xtra Big Bowl Kit',group:'Open Terrarium',price:285000},
-{id:'closed',name:'Closed Terrarium Workshop',group:'Closed Terrarium · starts from',price:125000},
-{id:'kokedama',name:'Kokedama Workshop',group:'Kokedama · starts from',price:50000},
-{id:'mini-terra',name:'Mini Terrarium Kit',group:'Planting Workshop for Kids',price:35000},
-{id:'sukulen-mini',name:'Sukulen Mini',group:'Planting Workshop for Kids',price:15000},
-{id:'sukulen-regular',name:'Sukulen Regular',group:'Planting Workshop for Kids',price:20000},
+{id:'tuscany',name:'Tuscany Kit',group:'Open Terrarium',price:65000,image:'images/tuscany.jpg'},
+{id:'barley',name:'Barley Kit',group:'Open Terrarium',price:65000,image:'images/barley.jpg'},
+{id:'medium',name:'Medium Bowl Kit',group:'Open Terrarium',price:145000,image:'images/medium.jpg'},
+{id:'big',name:'Big Bowl Kit',group:'Open Terrarium',price:185000,image:'images/big.jpg'},
+{id:'xtrabig',name:'Xtra Big Bowl Kit',group:'Open Terrarium',price:285000,image:'images/xtrabig.jpg'},
+{id:'closed',name:'Closed Terrarium Workshop',group:'Closed Terrarium · starts from',price:125000,image:'images/closed.jpg'},
+{id:'kokedama',name:'Kokedama Workshop',group:'Kokedama · starts from',price:50000,image:'images/kokedama.jpg'},
+{id:'mini-terra',name:'Mini Terrarium Kit',group:'Planting Workshop for Kids',price:35000,image:'images/mini-terra.jpg'},
+{id:'sukulen-mini',name:'Sukulen Mini',group:'Planting Workshop for Kids',price:15000,image:'images/sukulen-mini.jpg'},
+{id:'sukulen-regular',name:'Sukulen Regular',group:'Planting Workshop for Kids',price:20000,image:'images/sukulen-regular.jpg'},
 {id:'custom',name:'Custom Product',group:'Custom Workshop · isi nama dan harga sendiri',price:0}
 ];
 const $=id=>document.getElementById(id), rupiah=n=>'Rp'+Math.round(n).toLocaleString('id-ID');
-function renderProducts(){ $('kitList').innerHTML=products.map(p=>`<div class="kit"><input type="checkbox" id="check-${p.id}" aria-label="Pilih ${p.name}" onchange="calc()"><div><label for="check-${p.id}"><div class="kit-name">${p.name}</div><div class="kit-price">${p.group}${p.id==='custom'?'':' · '+rupiah(p.price)}</div></label>${p.id==='custom'?`<div class="qty"><input type="text" id="custom-name" placeholder="Nama produk custom" oninput="calc()" style="margin-bottom:8px"><input type="number" min="0" id="custom-price" placeholder="Harga per produk (Rp)" oninput="calc()" style="margin-bottom:8px"><input type="number" min="0" value="0" id="qty-custom" aria-label="Jumlah produk custom" oninput="calc()" placeholder="Jumlah produk"></div>`:`<div class="qty"><input type="number" min="0" value="0" id="qty-${p.id}" aria-label="Jumlah ${p.name}" oninput="calc()" placeholder="Jumlah kit"></div>`}</div></div>`).join(''); }
+function renderProducts(){ $('kitList').innerHTML=products.map(p=>`<div class="kit"><input type="checkbox" id="check-${p.id}" aria-label="Pilih ${p.name}" onchange="calc()">${p.image?`<img class="kit-photo" src="${p.image}" alt="${p.name}" loading="lazy">`:`<div class="kit-photo placeholder" aria-hidden="true">🌿</div>`}<div><label for="check-${p.id}"><div class="kit-name">${p.name}</div><div class="kit-price">${p.group}${p.id==='custom'?'':' · '+rupiah(p.price)}</div></label>${p.id==='custom'?`<div class="qty"><input type="text" id="custom-name" placeholder="Nama produk custom" oninput="calc()" style="margin-bottom:8px"><input type="number" min="0" id="custom-price" placeholder="Harga per produk (Rp)" oninput="calc()" style="margin-bottom:8px"><input type="number" min="0" value="0" id="qty-custom" aria-label="Jumlah produk custom" oninput="calc()" placeholder="Jumlah produk"></div>`:`<div class="qty"><input type="number" min="0" value="0" id="qty-${p.id}" aria-label="Jumlah ${p.name}" oninput="calc()" placeholder="Jumlah kit"></div>`}</div></div>`).join(''); }
 function calc(){
  const p=Math.max(0,Number($('participants').value)||0),loc=$('location').value,shipping=Math.max(0,Number($('shipping').value)||0),transportInput=Math.max(0,Number($('transport').value)||0),extras=Math.max(0,Number($('extras').value)||0);
  let kitCost=0,selected=[],totalKits=0;
@@ -73,6 +73,51 @@ function calc(){
  window.summary={p,loc,total,manual,addAssist,assistantCost,kitCost,service,teamTransport,shipping,extras,transportPending,selected,totalKits};
 }
 ['participants','format','location','transport','shipping','extras'].forEach(id=>$(id).addEventListener('input',calc));
-$('copy').addEventListener('click',()=>{const s=window.summary;let text='TERRARIUM PALACE — ESTIMASI WORKSHOP\nPeserta: '+s.p+'\nLokasi: '+s.loc+'\nKit: '+s.selected.map(x=>x.name+' ('+x.qty+' × '+rupiah(x.price)+')').join(', ')+'\nBiaya kit: '+rupiah(s.kitCost)+'\nWorkshop Service Fee: '+rupiah(s.service)+'\nAsisten tambahan: '+rupiah(s.assistantCost)+'\nTransportasi tim: '+rupiah(s.teamTransport)+(s.transportPending?' (belum diisi)':'')+'\nPengiriman kit: '+rupiah(s.shipping)+'\nBiaya tambahan: '+rupiah(s.extras)+(s.manual?'\nQuotation manual diperlukan.':'\nTotal estimasi: '+rupiah(s.total)+'\nDP 50%: '+rupiah(s.total*.5)+'\nPelunasan 50%: '+rupiah(s.total*.5));navigator.clipboard.writeText(text).then(()=>$('copy').textContent='Tersalin!').catch(()=>alert(text));});
+$('copy').addEventListener('click',()=>{
+ const s=window.summary;
+ const lines=[
+ '🌿 *TERRARIUM PALACE*',
+ '*WORKSHOP INVESTMENT ESTIMATION*',
+ '',
+ 'Berikut estimasi biaya untuk kegiatan workshop Anda:',
+ '',
+ '📋 *DETAIL KEGIATAN*',
+ '• Jumlah peserta: '+s.p+' orang',
+ '• Lokasi: '+(s.loc==='Bogor City'?'Kota Bogor':s.loc==='Jadetabek'?'Jadetabek':'Luar Jabodetabek'),
+ '',
+ '🪴 *WORKSHOP KIT*',
+ ...(s.selected.length?s.selected.map(x=>'• '+x.name+' — '+x.qty+' × '+rupiah(x.price)+' = '+rupiah(x.cost)):['• Belum ada kit yang dipilih']),
+ 'Subtotal Workshop Kit: *'+rupiah(s.kitCost)+'*',
+ '',
+ '💰 *COST BREAKDOWN*',
+ '• Workshop Service Fee: '+rupiah(s.service),
+ '• Additional Assistants: '+rupiah(s.assistantCost),
+ '• Team Transportation: '+(s.transportPending?'Belum diisi':rupiah(s.teamTransport)),
+ '• Kit Shipping & Delivery: '+(s.shipping?' '+rupiah(s.shipping):'Belum diisi'),
+ '• Other Additional Costs: '+rupiah(s.extras),
+ '────────────────────',
+ ...(s.manual?['*CUSTOM QUOTATION REQUIRED*','Untuk acara dengan lebih dari 60 peserta, total investasi dan kebutuhan tim perlu dikonfirmasi secara khusus oleh Terrarium Palace.']:['*TOTAL INVESTMENT*','*'+rupiah(s.total)+'*','','💳 *PAYMENT DETAILS*','• Down Payment (50%): '+rupiah(s.total*.5),'• Final Payment (50%): '+rupiah(s.total*.5)]),
+ '────────────────────',
+ '',
+ '✨ *Let’s Create Something Meaningful!*',
+ 'Bring nature closer to your team through a creative and memorable workshop experience.',
+ '',
+ '📱 WhatsApp: 0851-5630-9361',
+ '📷 Instagram: @terrariumpalace',
+ '',
+ '*Terrarium Palace*',
+ 'Create • Connect • Calm 🌱',
+ '',
+ '_This is a preliminary cost estimate and subject to final confirmation by Terrarium Palace._'
+ ];
+ if(s.transportPending||!s.shipping) lines.splice(lines.length-1,0,'_Catatan: nominal transportasi tim dan/atau pengiriman yang belum diisi belum termasuk dalam estimasi total._');
+ const text=lines.join('\n');
+ const copied=()=>{const btn=$('copy');btn.textContent='✓ Tersalin untuk WhatsApp';setTimeout(()=>btn.textContent='Copy WhatsApp Quotation',2500);};
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(copied).catch(()=>fallbackCopy(text,copied));}else{fallbackCopy(text,copied);}
+});
+function fallbackCopy(text,done){const area=document.createElement('textarea');area.value=text;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();try{document.execCommand('copy');done();}catch(e){alert('Salin teks berikut secara manual:\n\n'+text);}area.remove();}
+$('copy').textContent='Copy WhatsApp Quotation';
+$('withImages').addEventListener('click',()=>setImageView(true));$('withoutImages').addEventListener('click',()=>setImageView(false));
+function setImageView(show){$('kitList').classList.toggle('no-images',!show);$('withImages').classList.toggle('active',show);$('withoutImages').classList.toggle('active',!show);$('withImages').setAttribute('aria-pressed',String(show));$('withoutImages').setAttribute('aria-pressed',String(!show));}
 renderProducts();calc();
 </script></body></html>
