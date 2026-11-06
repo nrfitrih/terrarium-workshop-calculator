@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terrarium Palace | Workshop Calculator</title>
+<style>
+:root{--navy:#174a68;--blue:#dceffa;--mint:#e7f4ee;--gold:#fff1c9;--ink:#203544;--muted:#667985;--line:#dce6eb;--bg:#f4f8fa}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#eef7fb,#f8fbf8);font-family:Inter,Arial,sans-serif;color:var(--ink)}
+.wrap{max-width:760px;margin:32px auto;padding:16px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 12px 35px #174a6810}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}.mark{width:46px;height:46px;border-radius:14px;background:var(--blue);display:grid;place-items:center;font-size:25px}.brand strong{display:block;color:var(--navy);letter-spacing:.08em}.brand span{font-size:12px;color:var(--muted)}
+h1{font-size:30px;line-height:1.1;margin:8px 0;color:var(--navy)}.intro{color:var(--muted);margin:0 0 24px;line-height:1.5}
+.section{border-top:1px solid var(--line);padding-top:20px;margin-top:20px}.section h2{font-size:15px;margin:0 0 13px;color:var(--navy)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:14px}label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}
+input,select{width:100%;padding:12px 13px;border:1px solid #cbd9e1;border-radius:11px;background:#fff;color:var(--ink);font-size:15px}input:focus,select:focus{outline:2px solid #9bcce4;border-color:#6ba9ca}
+.hint{font-size:11px;color:var(--muted);line-height:1.45;margin-top:6px}.result{background:var(--blue);border-radius:16px;padding:18px;margin-top:20px}.result .eyebrow{font-size:11px;letter-spacing:.1em;font-weight:800;color:var(--navy)}.total{font-size:34px;font-weight:800;color:var(--navy);margin:5px 0}.per{font-size:13px;color:#456477}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}td{padding:10px 0;border-bottom:1px solid #d5e4eb}td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+.note{background:#fff8e6;border:1px solid #f1dfad;border-radius:12px;padding:13px;font-size:12px;line-height:1.5;margin-top:15px}
+.ok{background:var(--mint);border:1px solid #cce6d8;border-radius:12px;padding:13px;font-size:12px;line-height:1.5;margin-top:14px}
+button{border:0;background:var(--navy);color:#fff;border-radius:12px;padding:13px 16px;font-size:14px;font-weight:700;cursor:pointer;width:100%;margin-top:14px}button:hover{opacity:.92}
+.small{font-size:11px;color:var(--muted);line-height:1.5;margin-top:18px}
+.hidden{display:none!important}
+@media(max-width:560px){.wrap{margin:8px auto;padding:10px}.card{padding:19px}.grid{grid-template-columns:1fr}h1{font-size:26px}.total{font-size:29px}}
+</style>
+</head>
+<body>
+<div class="wrap"><main class="card">
+  <div class="brand"><div class="mark">🌿</div><div><strong>TERRARIUM PALACE</strong><span>Creative Nature Experience · Since 2018</span></div></div>
+  <h1>Workshop Price Calculator</h1>
+  <p class="intro">Plan your creative nature experience. Enter your event details to receive an estimated workshop investment.</p>
+
+  <div class="section" style="border:0;padding-top:0;margin-top:0">
+    <h2>01 · Workshop details</h2>
+    <div class="grid">
+      <div class="field"><label for="workshop">Workshop type</label>
+        <select id="workshop"><option value="Open Terrarium">Open Terrarium</option><option value="Closed Terrarium">Closed Terrarium</option><option value="Kokedama">Kokedama</option><option value="Succulent Arrangement">Succulent Arrangement</option><option value="Planting Workshop">Planting Workshop</option><option value="Custom Workshop">Custom Workshop</option></select></div>
+      <div class="field"><label for="kitprice">Kit price per kit (Rp)</label>
+        <select id="kitprice"><option value="65000">Barley / Tuscany — Rp65.000</option><option value="145000">Medium Bowl — Rp145.000</option><option value="245000">Extra Big Bowl — Rp245.000</option><option value="50000">Kokedama — Rp50.000</option><option value="custom">Enter custom price</option></select></div>
+    </div>
+    <div class="field hidden" id="customWrap"><label for="customPrice">Custom kit price (Rp)</label><input id="customPrice" type="number" min="0" placeholder="Enter confirmed kit price"></div>
+    <div class="grid">
+      <div class="field"><label for="participants">Number of participants</label><input id="participants" type="number" min="1" value="20"></div>
+      <div class="field"><label for="kits">Number of workshop kits</label><input id="kits" type="number" min="0" value="20"><div class="hint">Kit quantity can be lower than participant count for group activities.</div></div>
+    </div>
+    <div class="field"><label for="format">Workshop format</label><select id="format"><option>Individual kits</option><option>Shared / group kits</option></select></div>
+  </div>
+
+  <div class="section">
+    <h2>02 · Event location</h2>
+    <div class="field"><label for="location">Where will the event take place?</label>
+      <select id="location"><option value="Bogor City">Bogor City</option><option value="Outside Bogor City">Outside Bogor City (Bogor Regency / Sentul / Gunung Pancar)</option><option value="Jakarta">Jakarta</option><option value="Outside Jabodetabek">Outside Jabodetabek</option></select></div>
+    <div class="grid">
+      <div class="field"><label for="shipping">Kit shipping cost (Rp)</label><input id="shipping" type="number" min="0" value="0"><div class="hint">Enter the courier quote, or leave 0 if not yet known.</div></div>
+      <div class="field"><label for="transport">Team transport outside standard area (Rp)</label><input id="transport" type="number" min="0" value="0"><div class="hint">For Outside Bogor City / Outside Jabodetabek, enter the agreed estimate.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>03 · Additional requirements</h2>
+    <div class="field"><label for="extras">Other confirmed costs (Rp)</label><input id="extras" type="number" min="0" value="0"><div class="hint">Optional: venue, catering, custom branding, decoration, documentation, souvenirs, or other confirmed add-ons.</div></div>
+  </div>
+
+  <div id="result" class="result">
+    <div class="eyebrow">ESTIMATED WORKSHOP INVESTMENT</div>
+    <div class="total" id="total">Rp2.800.000</div>
+    <div class="per" id="per">Rp140.000 per participant</div>
+    <table id="breakdown"></table>
+    <div class="ok" id="team"></div>
+    <div class="ok" id="payment"></div>
+  </div>
+  <div id="manual" class="note hidden"></div>
+  <button id="copy">Copy estimate summary</button>
+  <p class="small">This calculator provides an indicative estimate, not a confirmed quotation. Final pricing is subject to Terrarium Palace confirmation. Events above 60 participants, complex group formats, volunteer arrangements, and special operational requirements require a manual quotation. Kit shipping is separate from team transportation.</p>
+</main></div>
+<script>
+const $=id=>document.getElementById(id);
+const rupiah=n=>'Rp'+Math.round(n).toLocaleString('id-ID');
+function calc(){
+  const p=Math.max(0,Number($('participants').value)||0), k=Math.max(0,Number($('kits').value)||0);
+  const choice=$('kitprice').value, custom=Number($('customPrice').value)||0;
+  const price=choice==='custom'?custom:Number(choice);
+  $('customWrap').classList.toggle('hidden',choice!=='custom');
+  const loc=$('location').value, shipping=Math.max(0,Number($('shipping').value)||0), transportInput=Math.max(0,Number($('transport').value)||0), extras=Math.max(0,Number($('extras').value)||0);
+  const manual=p>60;
+  const addAssist=Math.max(0,Math.ceil((p-20)/10));
+  const assistantRate=loc==='Bogor City'?100000:200000;
+  const assistantCost=addAssist*assistantRate;
+  const service=1500000;
+  const kitCost=k*price;
+  const teamTransport=loc==='Bogor City'?0:(loc==='Jakarta'?300000:transportInput);
+  const transportPending=(loc==='Outside Bogor City'||loc==='Outside Jabodetabek')&&transportInput===0;
+  const total=service+kitCost+assistantCost+teamTransport+shipping+extras;
+  $('manual').classList.toggle('hidden',!manual);
+  $('result').classList.toggle('hidden',manual);
+  if(manual){
+    $('manual').innerHTML='<b>Manual quotation required</b><br>For more than 60 participants, Terrarium Palace needs to review the facilitation structure, group format, coordinator needs, volunteer arrangement, event duration, and operational costs. Preliminary kit cost: '+rupiah(kitCost)+'. This is not a final workshop total.';
+  } else {
+    $('total').textContent=rupiah(total);
+    $('per').textContent=p?rupiah(total/p)+' per participant':'Enter participant count to calculate';
+    const rows=[
+      ['Workshop Service Fee','Up to 20 participants',service],
+      ['Workshop Kits',k+' × '+rupiah(price),kitCost],
+      ['Additional Assistants',addAssist+' × '+rupiah(assistantRate),assistantCost],
+      ['Team Transportation',loc==='Bogor City'?'Included':(loc==='Jakarta'?'Jakarta event fee':'To be confirmed'),teamTransport],
+      ['Kit Shipping','Entered estimate',shipping],
+      ['Other confirmed costs','Optional',extras]
+    ];
+    $('breakdown').innerHTML=rows.map(r=>'<tr><td>'+r[0]+'<br><span style="color:#71828d;font-size:11px">'+r[1]+'</span></td><td>'+rupiah(r[2])+'</td></tr>').join('');
+    const assistants=2+addAssist;
+    $('team').innerHTML='<b>Facilitation team</b><br>1 Lead Facilitator + '+assistants+' Assistant Facilitators ('+(assistants+1)+' team members total).';
+    $('payment').innerHTML='<b>Payment simulation</b><br>50% down payment: '+rupiah(total*.5)+' · 50% final payment: '+rupiah(total*.5);
+    if(transportPending) $('team').innerHTML += '<br><br><b>Transportation pending:</b> Team transport for this location must be quoted separately. The current total excludes it.';
+  }
+  window.summary={p,k,price,loc,total,manual,addAssist,assistantCost,kitCost,service,teamTransport,shipping,extras,transportPending};
+}
+['workshop','kitprice','customPrice','participants','kits','format','location','shipping','transport','extras'].forEach(id=>$(id).addEventListener('input',calc));
+$('copy').addEventListener('click',()=>{
+ const s=window.summary;
+ const text=s.manual?'Terrarium Palace workshop estimate\\nParticipants: '+s.p+'\\nKits: '+s.k+'\\nLocation: '+s.loc+'\\nPreliminary kit cost: '+rupiah(s.kitCost)+'\\nManual quotation required for event operations.':
+ 'TERRARIUM PALACE — WORKSHOP ESTIMATE\\nParticipants: '+s.p+'\\nKits: '+s.k+'\\nLocation: '+s.loc+'\\nWorkshop service fee: '+rupiah(s.service)+'\\nKits: '+rupiah(s.kitCost)+'\\nAdditional assistants: '+rupiah(s.assistantCost)+'\\nTeam transport: '+rupiah(s.teamTransport)+(s.transportPending?' (pending)':'')+'\\nKit shipping: '+rupiah(s.shipping)+'\\nOther costs: '+rupiah(s.extras)+'\\nEstimated total: '+rupiah(s.total)+'\\nPer participant: '+rupiah(s.total/Math.max(1,s.p))+'\\nDP 50%: '+rupiah(s.total*.5)+'\\nFinal payment 50%: '+rupiah(s.total*.5);
+ navigator.clipboard.writeText(text).then(()=>{$('copy').textContent='Copied!';setTimeout(()=>$('copy').textContent='Copy estimate summary',1800)}).catch(()=>alert(text));
+});
+calc();
+</script>
+</body></html>
